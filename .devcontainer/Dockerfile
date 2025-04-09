@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
-ARG DEBIAN_FRONTEND=noninteractive # This is no longer strictly necessary for Ubuntu, but won't hurt.
+# ARG DEBIAN_FRONTEND=noninteractive # This is no longer strictly necessary for Ubuntu, but won't hurt.
 USER root
 COPY php.ini /tmp
 
