@@ -14,7 +14,7 @@ RUN apt-get install git imagemagick libmagickwand-dev nano openssh-server sqlite
 RUN sed -i 's/<policy domain="coder" rights="none" pattern="PDF" \/>/<policy domain="coder" rights="read|write" pattern="PDF" \/>/g' /etc/ImageMagick-6/policy.xml
     # Install PHP CLI with some extensions for Drupal development
 RUN apt-get install php8.3-dev -yq
-RUN apt-get install php8.3-apcu php8.3-curl php8.3-gd php8.3-mbstring php8.3-sqlite3 php8.3-zip php8.3-intl -yq
+RUN apt-get install php8.3-xml php8.3-apcu php8.3-curl php8.3-gd php8.3-mbstring php8.3-sqlite3 php8.3-zip php8.3-intl -yq
 RUN pear config-set php_ini /etc/php/8.3/cli/php.ini
 RUN pecl install xdebug
 RUN printf "\n" | pecl install imagick
