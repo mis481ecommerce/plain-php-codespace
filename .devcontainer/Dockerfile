@@ -18,7 +18,7 @@ RUN apt-get install php8.3-xml php8.3-apcu php8.3-curl php8.3-gd php8.3-mbstring
 RUN pear config-set php_ini /etc/php/8.3/cli/php.ini
 RUN pecl install xdebug
 RUN printf "\n" | pecl install imagick
-RUN echo "" >> /etc/php/8.3/cli/php.ini && cat /tmp/php.ini >> /etc/php/8.3/cli/php.ini && echo "extension=imagick.so" >> /etc/php/8.3/cli/php.ini
+RUN echo "" >> /etc/php/8.3/cli/php.ini && cat /tmp/php.ini >> /etc/php/8.3/cli/php.ini
     # Install NodeJS LTS (keeping it commented out as in the original)
 # RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash
 # RUN apt-get install nodejs -yq
